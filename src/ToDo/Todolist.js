@@ -1,10 +1,23 @@
 import React from "react";
+import Todoitem from "./Todoitem";
 
-export default  function Todolist(){
+const styles = {
+    ul:{
+        listStyle: "none",
+        margin: 0,
+        padding: 0
+    }
+}
+
+export default  function Todolist(props){
     return (
-        <ul>
-            <li>1</li>
-            <li>2</li>
+        <ul style={styles.ul}>
+            {
+                props.todos.map((todo,index)=>
+                {
+                    return <Todoitem  todo={todo} key={todo.id} index={index}/>
+                })
+            }
         </ul>
     )
 }
