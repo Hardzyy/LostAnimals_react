@@ -1,8 +1,12 @@
 import React from "react";
 
-export default function Todoitem({ todo, index }){
+export default function Todoitem({ anno, index }){
     return (
-        <li><strong>{index+1}</strong>
-            {todo.title}</li>
-    )
+        <div>
+            <img
+                src={anno.url}
+                alt="new"
+            />
+        </div>
+    );
 }

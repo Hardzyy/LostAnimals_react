@@ -13,9 +13,9 @@ export default  function Todolist(props){
     return (
         <ul style={styles.ul}>
             {
-                props.todos.map((todo,index)=>
+                props.annos.map((anno,index)=>
                 {
-                    return <Todoitem  todo={todo} key={todo.id} index={index}/>
+                    return <Todoitem  anno={anno} key={anno.id} index={index}/>
                 })
             }
         </ul>

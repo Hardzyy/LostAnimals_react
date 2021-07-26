@@ -10,9 +10,20 @@ import {
     UncontrolledDropdown,
     DropdownToggle,
     DropdownMenu,
-    DropdownItem,
-    NavbarText
+    DropdownItem
 } from 'reactstrap';
+
+const styles = {
+    Nav:{
+        marginLeft: "auto",
+        marginRight: 0,
+        paddingRight: "1%"
+    },
+
+    NavbarBrand:{
+        paddingLeft: "2%"
+    }
+}
 
 const Navbarr = (props) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -21,16 +32,16 @@ const Navbarr = (props) => {
 
     return (
         <div>
-            <Navbar color="light" light expand="md">
-                <NavbarBrand href="/">reactstrap</NavbarBrand>
+            <Navbar color="light" light expand="md" fixed="top">
+                <NavbarBrand style={styles.NavbarBrand}>freewilly</NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
-                    <Nav className="mr-auto" navbar>
+                    <Nav style={styles.Nav} className="mr-auto" navbar>
                         <NavItem>
-                            <NavLink href="/components/">Components</NavLink>
+                            <NavLink>Components</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                            <NavLink>GitHub</NavLink>
                         </NavItem>
                         <UncontrolledDropdown nav inNavbar>
                             <DropdownToggle nav caret>
@@ -50,7 +61,6 @@ const Navbarr = (props) => {
                             </DropdownMenu>
                         </UncontrolledDropdown>
                     </Nav>
-                    <NavbarText>Simple Text</NavbarText>
                 </Collapse>
             </Navbar>
         </div>
