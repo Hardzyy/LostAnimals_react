@@ -12,6 +12,18 @@ const annos = [
         addres:[
         ]
     },
+    
+        id:1,
+        source_url: "https://www.animalcity.by/propala-koshka-52",
+        img_url:"https://www.animalcity.by/sites/default/files/styles/animal/public/4c562458-8866-4848-9843-18bd63dec930.jpeg?itok=Ji7pSFIZ",
+        title:"Пропала кошка",
+        type:"Бенгальская кошка",
+        description:"21.07.21 в СТ «Новые Ясевичи» Минский район рядом с деревнями Дубенцы,Богушово, Городище пропала бенгальская кошка,кличка Тейя,2 года, стерилизована.Очень пугливая, на руки к чужим не идёт, может шипеть.Пропала с закрытого участка, к уличной жизни не приспособлена. Кошка лучший друг ребёнка, ребёнок очень переживает.",
+        square: 220028,
+        date:"22.07.2021",
+        addres:[
+        ]
+    },
     {
         id:2,
         source_url: "https://www.animalcity.by/poteryan-kot-0",
