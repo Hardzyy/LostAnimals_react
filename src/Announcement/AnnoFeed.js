@@ -1,5 +1,5 @@
 import React from "react";
-import Todoitem from "./Todoitem";
+import ItemFeed from "./ItemFeed";
 
 const styles = {
     ul:{
@@ -9,13 +9,13 @@ const styles = {
     }
 }
 
-export default  function Todolist(props){
+export default  function AnnoFeed(props){
     return (
         <ul style={styles.ul}>
             {
                 props.annos.map((anno,index)=>
                 {
-                    return <Todoitem  anno={anno} key={anno.id} index={index}/>
+                    return <ItemFeed anno={anno} key={anno.id} index={index}/>
                 })
             }
         </ul>

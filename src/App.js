@@ -1,5 +1,5 @@
 import React from "react";
-import Todolist from "./ToDo/Todolist";
+import AnnoFeed from "./Announcement/AnnoFeed";
 import Navbarr from "./Navbarr";
 import annos from "./Аnnouncement";
 
@@ -8,7 +8,7 @@ function App() {
       <div>
           <Navbarr/>
           <div className="wrapper">
-            <Todolist annos={annos}/>
+            <AnnoFeed annos={annos}/>
           </div>
       </div>
   )
