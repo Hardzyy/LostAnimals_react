@@ -6,27 +6,27 @@ const contain = {
     margin: "1%"
 }
 
-const image = {
-    objectFit: "cover",
-    borderRadius: "5px",
-    width: "400px",
-    height: "400px",
-    display: "block",
-    marginLeft: "auto",
-    marginRight: "auto"
-}
-
 export default function Todoitem({anno}){
     return (
         <div style={contain}>
-            <div style={{width: "450px", height:"450px", float:"left"}}>
-                <img style={image}
-                     src={anno.url}
-                     alt="new"
+            <div className="container" style={{width: "450px", height:"450px", float:"left"}}>
+                <img className="image"
+                     src={anno.img_url}
+                     alt="Not loaded"
                 />
+                <div className="overlay">
+                    <div className="text"><a className="lost" href={anno.source_url} target={"_blank"}><strong>Нашли питома?</strong></a></div>
+                </div>
+                <p style={{textAlign:"center"}}>{anno.date}</p>
             </div>
-                <h4>{anno.title}</h4>
-                <p>Порода: {anno.type} Квартал: {anno.square}</p>
+                <div style={{width: "450px", height:"450px", float:"left"}}>
+                    <h4>{anno.title}</h4>
+                    <p><span>Порода: {anno.type}</span><span> Квартал: {anno.square}</span></p>
+                    <div>{anno.description}</div>
+                </div>
+                <div>
+                    Some content
+                </div>
             <div>
 
             </div>
