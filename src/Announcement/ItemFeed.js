@@ -20,9 +20,9 @@ const Mobile = ({ children }) => {
 
 export default function ItemFeed({anno}){
     return (
-        <div>
+        <div style={{background:"#CFB6D7"}}>
             <Desktop>
-                <Container style={{margin: "2%"}}>
+                <Container style={{marginTop: "3%"}}>
                     <Row>
                         <Col>
                             <img className="image"
@@ -31,14 +31,20 @@ export default function ItemFeed({anno}){
                                  alt="Not loaded"
                             />
                         </Col>
-                        <Col style={{ backgroundImage: `url(${background})` }}>
-                            <h4>{anno.title}</h4>
+                        <Col style={{ backgroundImage: `url(${background})`}}>
+                            <h4 itemID="opa">{anno.title}</h4>
                             <p>Порода: {anno.type}</p>
                             <p style={{textAlign:"center"}}>Дата объявления: {anno.date}</p>
                             <div>{anno.description}</div>
+                            <p>На карте отображен район, в котором предположительно находиться питомец.</p>
+                            <div style={{position:"absolute", bottom:"0px"}}>
+                                <a style={{textDecoration:"none",position:"center"}} href={anno.source_url}>Нашли потеряшку? Дайте владельцу знать!</a>
+                            </div>
                         </Col>
                         <Col style={{position: "relative"}}>
-                            <Ymapsmy anno={anno} wid="400px" hei="400px"/>
+                            <div style={{width:"400px", height:"400px"}}>
+                                <Ymapsmy anno={anno} wid="100%" hei="100%"/>
+                            </div>
                         </Col>
                     </Row>
                 </Container>
@@ -58,9 +64,15 @@ export default function ItemFeed({anno}){
                             <p>Порода: {anno.type}</p>
                             <p style={{textAlign:"center"}}>Дата объявления: {anno.date}</p>
                             <div>{anno.description}</div>
+                            <p>На карте отображен район, в котором предположительно находиться питомец.</p>
+                            <div style={{position:"absolute", bottom:"0px"}}>
+                                <a style={{textDecoration:"none",position:"center"}} href={anno.source_url}>Нашли потеряшку? Дайте владельцу знать!</a>
+                            </div>
                         </Col>
                         <Col style={{position: "relative"}}>
-                            <Ymapsmy anno={anno} wid="300px" hei="300px"/>
+                            <div style={{width:"300px", height:"300px"}}>
+                                <Ymapsmy anno={anno} wid="100%" hei="100%"/>
+                            </div>
                         </Col>
                     </Row>
                 </Container>
@@ -79,6 +91,8 @@ export default function ItemFeed({anno}){
                             <p>Порода: {anno.type}</p>
                             <p style={{textAlign:"center"}}>Дата объявления: {anno.date}</p>
                             <div>{anno.description}</div>
+                            <p>На карте отображен район, в котором предположительно находиться питомец.</p>
+                            <a style={{textDecoration:"none"}} href={anno.source_url}>Нашли потеряшку? Дайте владельцу знать!</a>
                         </Row>
                         <Row>
                             <div style={{width:"350px", height:"400px"}}>

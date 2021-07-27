@@ -13,7 +13,6 @@ export default function Ymapsmy({anno, wid, hei}){
     ];
     return(
         <YMaps>
-            <div>Территория вблизи места потери</div>
             <Map defaultState={mapState} width={wid} height={hei}>
                 <Polygon
                     geometry={POLYGON_COORDS}

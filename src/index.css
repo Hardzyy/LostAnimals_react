@@ -16,6 +16,7 @@ code {
   padding: 5rem 0;
   margin: 0 auto;
   width: 75%;
+  background: #CFB6D7;
 }
 
 .container {
@@ -33,26 +34,6 @@ code {
   transition: 2s ease;
 }
 
-.container:hover .image {
-  opacity: 0.66;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: 0.25s ease;
-}
-.container:hover .overlay {
-  color: darkred;
-  opacity: 1;
-}
-
 .text {
   color: white;
   font-size: 20px;
@@ -61,4 +42,8 @@ code {
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+}
+
+#opa{
+  opacity: 1;
 }

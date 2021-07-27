@@ -8,11 +8,7 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem
+    NavLink
 } from 'reactstrap';
 
 const styles = {
@@ -34,34 +30,26 @@ const Navbarr = (props) => {
 
     return (
         <div>
-            <Navbar color="#" light expand="md" fixed="top">
+            <Navbar style={{background:"#ECC7D8"}} light expand="md" fixed="top">
                 <NavbarBrand style={styles.NavbarBrand}><img style={{width:"10%", height:"10%", paddingRight:"10px"}} src={pict} alt="logo"/>freewilly</NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav style={styles.Nav} className="mr-auto" navbar>
                         <NavItem>
-                            <NavLink>Components</NavLink>
+                            <NavLink>Ищут дом</NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink>GitHub</NavLink>
+                            <NavLink>Новости</NavLink>
                         </NavItem>
-                        <UncontrolledDropdown nav inNavbar>
-                            <DropdownToggle nav caret>
-                                Options
-                            </DropdownToggle>
-                            <DropdownMenu right>
-                                <DropdownItem>
-                                    Option 1
-                                </DropdownItem>
-                                <DropdownItem>
-                                    Option 2
-                                </DropdownItem>
-                                <DropdownItem divider />
-                                <DropdownItem>
-                                    Reset
-                                </DropdownItem>
-                            </DropdownMenu>
-                        </UncontrolledDropdown>
+                        <NavItem>
+                            <NavLink>Потерянные</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink>Другие объявления</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink>Связь с нами</NavLink>
+                        </NavItem>
                     </Nav>
                 </Collapse>
             </Navbar>
