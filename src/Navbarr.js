@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import pict from "./logo.png";
+
 import {
     Collapse,
     Navbar,
@@ -32,8 +34,8 @@ const Navbarr = (props) => {
 
     return (
         <div>
-            <Navbar color="light" light expand="md" fixed="top">
-                <NavbarBrand style={styles.NavbarBrand}>freewilly</NavbarBrand>
+            <Navbar color="#" light expand="md" fixed="top">
+                <NavbarBrand style={styles.NavbarBrand}><img style={{width:"10%", height:"10%", paddingRight:"10px"}} src={pict} alt="logo"/>freewilly</NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav style={styles.Nav} className="mr-auto" navbar>
