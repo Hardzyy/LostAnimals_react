@@ -14,7 +14,12 @@ const LowResDesktop = ({ children }) => {
 }
 
 const Mobile = ({ children }) => {
-    const isMobile = useMediaQuery({ maxWidth: 767 })
+    const isMobile = useMediaQuery({minWidth:300, maxWidth: 600 })
+    return isMobile ? children : null
+}
+
+const Tablet = ({ children }) => {
+    const isMobile = useMediaQuery({minWidth:600, maxWidth: 992 })
     return isMobile ? children : null
 }
 
@@ -50,7 +55,7 @@ export default function ItemFeed({anno}){
                 </Container>
             </Desktop>
             <LowResDesktop>
-                <Container style={{margin: "2%"}}>
+                <Container style={{marginTop: "2%"}}>
                     <Row>
                         <Col>
                             <img className="image"
@@ -77,8 +82,32 @@ export default function ItemFeed({anno}){
                     </Row>
                 </Container>
             </LowResDesktop>
+            <Tablet>
+                <Container style={{marginTop: "2%"}}>
+                    <Row>
+                        <img className="image"
+                             style={{width:"500px", height:"500px"}}
+                             src={anno.img_url}
+                             alt="Not loaded"
+                        />
+                    </Row>
+                    <Row style={{ backgroundImage: `url(${background})` }}>
+                        <h4>{anno.title}</h4>
+                        <p>Порода: {anno.type}</p>
+                        <p style={{textAlign:"center"}}>Дата объявления: {anno.date}</p>
+                        <div>{anno.description}</div>
+                        <p>На карте отображен район, в котором предположительно находиться питомец.</p>
+                        <a style={{textDecoration:"none"}} href={anno.source_url}>Нашли потеряшку? Дайте владельцу знать!</a>
+                    </Row>
+                    <Row>
+                        <div style={{width:"500px", height:"500px"}}>
+                            <Ymapsmy anno={anno} wid="100%" hei="100%"/>
+                        </div>
+                    </Row>
+                </Container>
+            </Tablet>
             <Mobile>
-                <Container style={{margin: "2%"}}>
+                <Container style={{marginTop: "2%"}}>
                         <Row>
                             <img className="image"
                                  style={{width:"350px", height:"350px"}}
