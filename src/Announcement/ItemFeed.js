@@ -41,7 +41,7 @@ export default function ItemFeed({anno}){
                             <p>Порода: {anno.type}</p>
                             <p style={{textAlign:"center"}}>Дата объявления: {anno.date}</p>
                             <div>{anno.description}</div>
-                            <p>На карте отображен район, в котором предположительно находиться питомец.</p>
+                            <p style={{textAlign:"center"}}>На карте отображен район, в котором предположительно находиться питомец.</p>
                             <div style={{position:"absolute", bottom:"0px"}}>
                                 <a style={{textDecoration:"none",position:"center"}} href={anno.source_url}>Нашли потеряшку? Дайте владельцу знать!</a>
                             </div>
@@ -69,7 +69,7 @@ export default function ItemFeed({anno}){
                             <p>Порода: {anno.type}</p>
                             <p style={{textAlign:"center"}}>Дата объявления: {anno.date}</p>
                             <div>{anno.description}</div>
-                            <p>На карте отображен район, в котором предположительно находиться питомец.</p>
+                            <p style={{textAlign:"center"}}>На карте отображен район, в котором предположительно находиться питомец.</p>
                             <div style={{position:"absolute", bottom:"0px"}}>
                                 <a style={{textDecoration:"none",position:"center"}} href={anno.source_url}>Нашли потеряшку? Дайте владельцу знать!</a>
                             </div>
@@ -96,7 +96,7 @@ export default function ItemFeed({anno}){
                         <p>Порода: {anno.type}</p>
                         <p style={{textAlign:"center"}}>Дата объявления: {anno.date}</p>
                         <div>{anno.description}</div>
-                        <p>На карте отображен район, в котором предположительно находиться питомец.</p>
+                        <p style={{textAlign:"center"}}>На карте отображен район, в котором предположительно находиться питомец.</p>
                         <a style={{textDecoration:"none"}} href={anno.source_url}>Нашли потеряшку? Дайте владельцу знать!</a>
                     </Row>
                     <Row>
@@ -120,7 +120,7 @@ export default function ItemFeed({anno}){
                             <p>Порода: {anno.type}</p>
                             <p style={{textAlign:"center"}}>Дата объявления: {anno.date}</p>
                             <div>{anno.description}</div>
-                            <p>На карте отображен район, в котором предположительно находиться питомец.</p>
+                            <p style={{textAlign:"center"}}>На карте отображен район, в котором предположительно находиться питомец.</p>
                             <a style={{textDecoration:"none"}} href={anno.source_url}>Нашли потеряшку? Дайте владельцу знать!</a>
                         </Row>
                         <Row>

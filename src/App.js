@@ -12,7 +12,6 @@ function App() {
             <AnnoFeed annos={annos}/>
           </div>
         <Footer>
-
         </Footer>
       </div>
   )
