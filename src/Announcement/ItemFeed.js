@@ -1,8 +1,8 @@
 import React from "react";
-import {YMaps, Map, Polygon} from "react-yandex-maps";
 import {Container, Row, Col} from "reactstrap";
 import{useMediaQuery} from "react-responsive";
 import background from './text_back.png';
+import Ymapsmy from "./Ymapsmy";
 
 const Desktop = ({ children }) => {
     const isDesktop = useMediaQuery({ minWidth: 1367 })
@@ -12,25 +12,13 @@ const LowResDesktop = ({ children }) => {
     const isDesktop = useMediaQuery({minWidth: 992, maxWidth: 1367 })
     return isDesktop ? children : null
 }
-const Tablet = ({ children }) => {
-    const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 })
-    return isTablet ? children : null
-}
+
 const Mobile = ({ children }) => {
     const isMobile = useMediaQuery({ maxWidth: 767 })
     return isMobile ? children : null
 }
 
 export default function ItemFeed({anno}){
-    const mapState = {
-        center: anno.center,
-        zoom: 14
-    };
-
-    const POLYGON_COORDS = [
-        anno.cords
-    ];
-
     return (
         <div>
             <Desktop>
@@ -50,21 +38,7 @@ export default function ItemFeed({anno}){
                             <div>{anno.description}</div>
                         </Col>
                         <Col style={{position: "relative"}}>
-                            <YMaps>
-                                <div>Территория вблизи места потери</div>
-                                <Map defaultState={mapState} width="400px" height="400px">
-                                    <Polygon
-                                        geometry={POLYGON_COORDS}
-                                        options={{
-                                            fillColor: "#cf453c",
-                                            strokeColor: "#000000",
-                                            opacity: 0.5,
-                                            strokeWidth: 5,
-                                            strokeStyle: "shortdash"
-                                        }}
-                                    />
-                                </Map>
-                            </YMaps>
+                            <Ymapsmy anno={anno} wid="400px" hei="400px"/>
                         </Col>
                     </Row>
                 </Container>
@@ -86,26 +60,11 @@ export default function ItemFeed({anno}){
                             <div>{anno.description}</div>
                         </Col>
                         <Col style={{position: "relative"}}>
-                            <YMaps>
-                                <div>Территория вблизи места потери</div>
-                                <Map defaultState={mapState} width="300px" height="300px">
-                                    <Polygon
-                                        geometry={POLYGON_COORDS}
-                                        options={{
-                                            fillColor: "#cf453c",
-                                            strokeColor: "#000000",
-                                            opacity: 0.5,
-                                            strokeWidth: 5,
-                                            strokeStyle: "shortdash"
-                                        }}
-                                    />
-                                </Map>
-                            </YMaps>
+                            <Ymapsmy anno={anno} wid="300px" hei="300px"/>
                         </Col>
                     </Row>
                 </Container>
             </LowResDesktop>
-            <Tablet>Tablet</Tablet>
             <Mobile>
                 <Container style={{margin: "2%"}}>
                         <Row>
@@ -123,26 +82,11 @@ export default function ItemFeed({anno}){
                         </Row>
                         <Row>
                             <div style={{width:"350px", height:"400px"}}>
-                                <YMaps>
-                                    <div>Территория вблизи места потери</div>
-                                    <Map defaultState={mapState} width="100%" heigth="100%">
-                                        <Polygon
-                                            geometry={POLYGON_COORDS}
-                                            options={{
-                                                fillColor: "#cf453c",
-                                                strokeColor: "#000000",
-                                                opacity: 0.5,
-                                                strokeWidth: 5,
-                                                strokeStyle: "shortdash"
-                                            }}
-                                        />
-                                    </Map>
-                                </YMaps>
+                                <Ymapsmy anno={anno} wid="100%" hei="100%"/>
                             </div>
                         </Row>
                 </Container>
             </Mobile>
         </div>
-
     );
 }
