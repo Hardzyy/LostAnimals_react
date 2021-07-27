@@ -74,7 +74,7 @@ export default function ItemFeed({anno}){
                     <Row>
                         <Col>
                             <img className="image"
-                                 style={{width:"400px", height:"400px"}}
+                                 style={{width:"300px", height:"300px"}}
                                  src={anno.img_url}
                                  alt="Not loaded"
                             />
@@ -88,7 +88,7 @@ export default function ItemFeed({anno}){
                         <Col style={{position: "relative"}}>
                             <YMaps>
                                 <div>Территория вблизи места потери</div>
-                                <Map defaultState={mapState} width="400px" height="400px">
+                                <Map defaultState={mapState} width="300px" height="300px">
                                     <Polygon
                                         geometry={POLYGON_COORDS}
                                         options={{
