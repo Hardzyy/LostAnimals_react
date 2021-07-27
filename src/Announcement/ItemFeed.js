@@ -37,12 +37,12 @@ export default function ItemFeed({anno}){
                             />
                         </Col>
                         <Col style={{ backgroundImage: `url(${background})`}}>
-                            <h4 itemID="opa">{anno.title}</h4>
-                            <p>Порода: {anno.type}</p>
-                            <p style={{textAlign:"center"}}>Дата объявления: {anno.date}</p>
-                            <div>{anno.description}</div>
-                            <p style={{textAlign:"center"}}>На карте отображен район, в котором предположительно находиться питомец.</p>
-                            <div style={{position:"absolute", bottom:"0px"}}>
+                            <h4 style={{fontFamily:"Impact, fantasy"}}>{anno.title}</h4>
+                            <p style={{fontFamily:"URW Gothic L, sans-serif"}}>Порода: {anno.type}</p>
+                            <p style={{textAlign:"center", fontFamily:"URW Gothic L, sans-serif"}}>Дата объявления: {anno.date}</p>
+                            <div style={{fontFamily:"Comic Sans, cursive"}}><i>{anno.description}</i></div>
+                            <p style={{textAlign:"center"}}><strong>На карте отображен район, в котором предположительно находится питомец.</strong></p>
+                            <div style={{position:"absolute", bottom:"-10px"}}>
                                 <a style={{textDecoration:"none",position:"center"}} href={anno.source_url}>Нашли потеряшку? Дайте владельцу знать!</a>
                             </div>
                         </Col>
@@ -65,12 +65,12 @@ export default function ItemFeed({anno}){
                             />
                         </Col>
                         <Col style={{ backgroundImage: `url(${background})` }}>
-                            <h4>{anno.title}</h4>
-                            <p>Порода: {anno.type}</p>
-                            <p style={{textAlign:"center"}}>Дата объявления: {anno.date}</p>
-                            <div>{anno.description}</div>
-                            <p style={{textAlign:"center"}}>На карте отображен район, в котором предположительно находиться питомец.</p>
-                            <div style={{position:"absolute", bottom:"0px"}}>
+                            <h4 style={{fontFamily:"Impact, fantasy"}}>{anno.title}</h4>
+                            <p style={{fontFamily:"URW Gothic L, sans-serif"}}>Порода: {anno.type}</p>
+                            <p style={{textAlign:"center", fontFamily:"URW Gothic L, sans-serif"}}>Дата объявления: {anno.date}</p>
+                            <div style={{fontFamily:"Comic Sans, cursive"}}><i>{anno.description}</i></div>
+                            <p style={{textAlign:"center" }}><strong>На карте отображен район, в котором предположительно находится питомец.</strong></p>
+                            <div style={{position:"absolute", bottom:"-10px"}}>
                                 <a style={{textDecoration:"none",position:"center"}} href={anno.source_url}>Нашли потеряшку? Дайте владельцу знать!</a>
                             </div>
                         </Col>
@@ -92,11 +92,11 @@ export default function ItemFeed({anno}){
                         />
                     </Row>
                     <Row style={{ backgroundImage: `url(${background})` }}>
-                        <h4>{anno.title}</h4>
-                        <p>Порода: {anno.type}</p>
-                        <p style={{textAlign:"center"}}>Дата объявления: {anno.date}</p>
-                        <div>{anno.description}</div>
-                        <p style={{textAlign:"center"}}>На карте отображен район, в котором предположительно находиться питомец.</p>
+                        <h4 style={{fontFamily:"Impact, fantasy"}}>{anno.title}</h4>
+                        <p style={{fontFamily:"URW Gothic L, sans-serif"}}>Порода: {anno.type}</p>
+                        <p style={{textAlign:"center", fontFamily:"URW Gothic L, sans-serif"}}>Дата объявления: {anno.date}</p>
+                        <div style={{fontFamily:"Comic Sans, cursive"}}><i>{anno.description}</i></div>
+                        <p style={{textAlign:"center", marginTop:"1%",marginBottom:"1%" }}><strong>На карте отображен район, в котором предположительно находится питомец.</strong></p>
                         <a style={{textDecoration:"none"}} href={anno.source_url}>Нашли потеряшку? Дайте владельцу знать!</a>
                     </Row>
                     <Row>
@@ -116,11 +116,11 @@ export default function ItemFeed({anno}){
                             />
                         </Row>
                         <Row style={{ backgroundImage: `url(${background})` }}>
-                            <h4>{anno.title}</h4>
-                            <p>Порода: {anno.type}</p>
-                            <p style={{textAlign:"center"}}>Дата объявления: {anno.date}</p>
-                            <div>{anno.description}</div>
-                            <p style={{textAlign:"center"}}>На карте отображен район, в котором предположительно находиться питомец.</p>
+                            <h4 style={{fontFamily:"Impact, fantasy"}}>{anno.title}</h4>
+                            <p style={{fontFamily:"URW Gothic L, sans-serif"}}>Порода: {anno.type}</p>
+                            <p style={{textAlign:"center", fontFamily:"URW Gothic L, sans-serif"}}>Дата объявления: {anno.date}</p>
+                            <div style={{fontFamily:"Comic Sans, cursive"}}><i>{anno.description}</i></div>
+                            <p style={{textAlign:"center", marginTop:"1%",marginBottom:"1%" }}><strong>На карте отображен район, в котором предположительно находится питомец.</strong></p>
                             <a style={{textDecoration:"none"}} href={anno.source_url}>Нашли потеряшку? Дайте владельцу знать!</a>
                         </Row>
                         <Row>
