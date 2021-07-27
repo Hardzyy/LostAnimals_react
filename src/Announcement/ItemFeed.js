@@ -47,7 +47,7 @@ export default function ItemFeed({anno}){
                             </div>
                         </Col>
                         <Col style={{position: "relative"}}>
-                            <div style={{width:"400px", height:"400px"}}>
+                            <div style={{width:"400px", height:"400px", marginLeft:"auto", marginRight:"auto"}}>
                                 <Ymapsmy anno={anno} wid="100%" hei="100%"/>
                             </div>
                         </Col>
@@ -75,7 +75,7 @@ export default function ItemFeed({anno}){
                             </div>
                         </Col>
                         <Col style={{position: "relative"}}>
-                            <div style={{width:"300px", height:"300px"}}>
+                            <div style={{width:"300px", height:"300px", marginLeft:"auto", marginRight:"auto"}}>
                                 <Ymapsmy anno={anno} wid="100%" hei="100%"/>
                             </div>
                         </Col>
@@ -100,7 +100,7 @@ export default function ItemFeed({anno}){
                         <a style={{textDecoration:"none"}} href={anno.source_url}>Нашли потеряшку? Дайте владельцу знать!</a>
                     </Row>
                     <Row>
-                        <div style={{width:"500px", height:"500px"}}>
+                        <div style={{width:"500px", height:"500px", marginLeft:"auto", marginRight:"auto"}}>
                             <Ymapsmy anno={anno} wid="100%" hei="100%"/>
                         </div>
                     </Row>
@@ -124,7 +124,7 @@ export default function ItemFeed({anno}){
                             <a style={{textDecoration:"none"}} href={anno.source_url}>Нашли потеряшку? Дайте владельцу знать!</a>
                         </Row>
                         <Row>
-                            <div style={{width:"350px", height:"400px"}}>
+                            <div style={{width:"350px", height:"400px", marginLeft:"auto", marginRight:"auto"}}>
                                 <Ymapsmy anno={anno} wid="100%" hei="100%"/>
                             </div>
                         </Row>
